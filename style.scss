@@ -1,0 +1,181 @@
+$contentMargin: 50px;
+
+html,
+body {
+  height: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:-apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI","Noto Sans Japanese","ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  background-color: #000;
+  color: #FFF;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: $contentMargin;
+}
+
+.calendar {
+  font-weight: 500;
+
+  &__month,
+  &__date {
+    font-size: 130px;
+  }
+
+  &__separator {
+    font-size: 120px;
+  }
+
+  &__day {
+    margin-left: 20px;
+    font-size: 80px;
+    vertical-align: super;
+
+  }
+}
+
+.clock {
+  display: flex;
+  justify-content: center;
+
+  font-size: 130px;
+  font-weight: 700;
+
+  &__colon {
+    margin-top: -12px;
+    animation: blinkSecond 1s ease infinite alternate;
+
+    @keyframes blinkSecond {
+      0% {
+        opacity: 0.2;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.weather {
+  margin-top: $contentMargin;
+
+  &__main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__icon {
+    flex: 0 0 50%;
+    font-size: 200px;
+    text-align: center;
+  }
+
+  &__meta {
+    flex: 0 0 50%;
+
+    i.wi {
+      margin-right: 10px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 10px;
+    font-size: 60px;
+    font-weight: bold;
+  }
+
+  &__temp {
+    font-size: 40px;
+  }
+
+  &__cloudy {
+    font-size: 40px;
+    margin-left: 60px;
+  }
+
+  &__timeline {
+    margin-top: $contentMargin;
+  }
+}
+
+.timeline {
+  margin: 0 auto;
+  border-collapse: collapse;
+
+
+  tr {
+    height: 140px;
+    border-bottom: 1px solid #FFF;
+    &:last-child {
+      border: none;
+    }
+  }
+
+  &__time {
+    padding-left: 50px;
+    padding-right: 30px;
+    text-align: right;
+    vertical-align: middle;
+    font-size: 45px;
+    font-weight: normal;
+  }
+
+  &__tomorrowText {
+    display: inline-block;
+    font-size: 30px;
+    margin-right: 10px;
+  }
+
+  &__content {
+    padding-right: 70px;
+    padding-left: 60px;
+    vertical-align: middle;
+  }
+
+  &__icon {
+    font-size: 80px;
+    vertical-align: sub;
+
+    > i:not(.wi):before {
+      content: "--";
+    }
+  }
+
+  &__cloudy {
+    display: inline-block;
+    width: 145px;
+    text-align: right;
+    font-size: 45px;
+
+    > span {
+      font-size: 60px;
+    }
+  }
+
+}
+
+.settings {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+
+  &__update {
+    display: inline-block;
+    font-size: 30px;
+    padding: 4px 8px;
+    color: #FFF;
+    opacity: 0.4;
+    text-decoration: none;
+  }
+
+}

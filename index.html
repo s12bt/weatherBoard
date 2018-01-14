@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex,follow" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>WEATHER</title>
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+    <link rel="stylesheet" href="./weather-icons/css/weather-icons.min.css" type="text/css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="calendar">
+        <span id="calMon" class="calendar__month">--</span>
+        <span class="calendar__separator">/</span>
+        <span id="calDate" class="calendar__date">--</span>
+        <span id="" class="calendar__day">(<span id="calDay">--</span>)</span>
+      </div>
+      <div class="clock">
+        <span id="clockHH" class="clock__hour">--</span>
+        <span class="clock__colon">:</span>
+        <span id="clockMM" class="clock__minute">--</span>
+      </div>
+    </div>
+    <div class="weather">
+      <div class="weather__main">
+        <div class="weather__icon">
+          <i id="todayWeatherIcon"></i>
+        </div>
+        <div class="weather__meta">
+          <div id="todayWeatherText" class="weather__text"></div>
+          <span class="weather__temp">
+            <i class="wi wi-thermometer"></i>
+            <span id="todayWeatherTemp">--</span>℃
+          </span>
+          <span class="weather__cloudy">
+            <i class="wi wi-umbrella"></i> <span id="todayWeatherClouds">--</span>%
+          </span>
+        </div>
+      </div>
+
+      <div class="weather__timeline">
+        <table class="timeline">
+          <tr>
+            <th class="timeline__time">6:00</th>
+            <td class="timeline__content">
+              <span class="timeline__icon">
+                <i id="timeline_6_icon" class=""></i>
+              </span>
+              <span class="timeline__cloudy">
+                <span id="timeline_6_cloud">--</span>%
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <th class="timeline__time">12:00</th>
+            <td class="timeline__content">
+              <span class="timeline__icon">
+                <i id="timeline_12_icon" class=""></i>
+              </span>
+              <span class="timeline__cloudy">
+                <span id="timeline_12_cloud">--</span>%
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <th class="timeline__time">18:00</th>
+            <td class="timeline__content">
+              <span class="timeline__icon">
+                <i id="timeline_18_icon" class=""></i>
+              </span>
+              <span class="timeline__cloudy">
+                <span id="timeline_18_cloud">--</span>%
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <th class="timeline__time">24:00</th>
+            <td class="timeline__content">
+              <span class="timeline__icon">
+                <i id="timeline_24_icon" class=""></i>
+              </span>
+              <span class="timeline__cloudy">
+                <span id="timeline_24_cloud">--</span>%
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <th class="timeline__time"><span class="timeline__tomorrowText">tomorrow</span> 6:00</th>
+            <td class="timeline__content">
+              <span class="timeline__icon">
+                <i id="timeline_tomorrow_icon" class=""></i>
+              </span>
+              <span class="timeline__cloudy">
+                <span id="timeline_tomorrow_cloud">--</span>%
+              </span>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="settings">
+      <a href="javascript:" id="btnReload" class="settings__update"></a>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
